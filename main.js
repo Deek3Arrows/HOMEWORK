@@ -21,5 +21,10 @@ tool.onMouseDown = function(event) {
   var c = Shape.Circle(event.point.x, event.point.y, 20);
   c.fillColor = 'green';
 };
+tool.onMouseUp = function(event) {
+	var radius = event.delta.length / 2;
+	var circle = new Path.Circle(event.middlePoint, radius);
+	circle.fillColor = 'black';
+};
   ('main.js loaded')
 }())
