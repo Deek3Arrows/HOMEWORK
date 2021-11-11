@@ -17,14 +17,16 @@ paper.view.draw();
   }*/
 //USER INPUT TOOL//
 var tool = new Tool();
-tool.onMouseDown = function(event) {
+/*tool.onMouseDown = function(event) {
   var c = Shape.Circle(event.point.x, event.point.y, 20);
   c.fillColor = 'green';
-};
+};*/
+/*tool.maxDistance = 20;
+tool.minDistance = 5;*/
 tool.onMouseUp = function(event) {
 	var radius = event.delta.length / 2;
 	var circle = new Path.Circle(event.middlePoint, radius);
-	circle.fillColor = 'black';
+	circle.fillColor = 'green';
 };
   ('main.js loaded')
 }())
